@@ -1,3 +1,4 @@
+//Luis Vargas 30833554
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -47,7 +48,7 @@ Pila *crearPila() {
 
 eliminarCoche(Pila *pila) {
     if (pila->tope == NULL) {
-        printf("La pila est· vacÌa, no se puede eliminar ning˙n coche.\n");
+        printf("La pila est√° vac√≠a, no se puede eliminar ning√∫n coche.\n");
     } else {
         Nodo *aux = pila->tope;
         pila->tope = pila->tope->siguiente;
@@ -60,14 +61,14 @@ eliminarCoche(Pila *pila) {
 
 mostrarCoches(Pila *pila) {
     if (pila->tope == NULL) {
-        printf("La pila est· vacÌa.\n");
+        printf("La pila est√° vac√≠a.\n");
     } else {
         Nodo *aux = pila->tope;
         while (aux != NULL) {
             printf("Marca: %s\n", aux->dato->marca);
             printf("Modelo: %s\n", aux->dato->modelo);
-            printf("MatrÌcula: %s\n", aux->dato->matricula);
-            printf("AÒo: %d\n", aux->dato->age);
+            printf("Matr√≠cula: %s\n", aux->dato->matricula);
+            printf("A√±o: %d\n", aux->dato->age);
             printf("Color: %s\n", aux->dato->color);
             aux = aux->siguiente;
         }
@@ -83,7 +84,7 @@ int main() {
         printf("2. Eliminar coche\n");
         printf("3. Mostrar coches en la pila\n");
         printf("4. Salir\n");
-        printf("Selecciona una opciÛn: ");
+        printf("Selecciona una opci√≥n: ");
         scanf("%d", &opcion);
         switch (opcion) {
             case 1: {
@@ -93,9 +94,9 @@ int main() {
                 scanf("%s", marca);
                 printf("Modelo: ");
                 scanf("%s", modelo);
-                printf("MatrÌcula: ");
+                printf("Matr√≠cula: ");
                 scanf("%s", matricula);
-                printf("AÒo: ");
+                printf("A√±o: ");
                 scanf("%d", &age);
                 printf("Color: ");
                 scanf("%s", color);
@@ -115,11 +116,11 @@ int main() {
             break;
             }
             case 4: {
-                printf("AdiÛs!\n");
+                printf("Adi√≥s!\n");
             break;
             }
             default: {
-                printf("OpciÛn inv·lida.\n");
+                printf("Opci√≥n inv√°lida.\n");
             break;
             }
             }
