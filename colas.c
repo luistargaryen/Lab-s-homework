@@ -1,3 +1,5 @@
+//Luis Vargas
+//30833554
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -73,7 +75,7 @@ void mostrar(Cola *c) {
 
     Nodo *actual = c->primero;
     while (actual != NULL) {
-        printf("%s (%d años) - $%.2f\n", actual->empleado.nombre, actual->empleado.edad, actual->empleado.salario);
+        printf("%s (%d aÃ±os) - $%.2f\n", actual->empleado.nombre, actual->empleado.edad, actual->empleado.salario);
         actual = actual->sig;
     }
 
@@ -103,8 +105,8 @@ int main() {
     while (c->tamano > 0) {
         Empleado eliminado = deQueue(c);
         if (strlen(eliminado.nombre) > 0) {
-            printf("Eliminado: %s (%d años) - $%.2f\n", eliminado.nombre, eliminado.edad, eliminado.salario);
-        } else {printf("La cola está vacía\n");
+            printf("Eliminado: %s (%d aÃ±os) - $%.2f\n", eliminado.nombre, eliminado.edad, eliminado.salario);
+        } else {printf("La cola estÃ¡ vacÃ­a\n");
             }
     }
     return 0;
